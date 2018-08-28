@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author 19759309-1
  */
-public class CopiarArreglos {
+public class ArreglosIgualesODistintos {
 
     /**
      * @param args the command line arguments
@@ -23,21 +23,18 @@ public class CopiarArreglos {
         // TODO code application logic here
 
         
-        int arr1[] ={7,5,1,9,10};
-        int arr2[] ={7,56,1,4,10};
+        int miarreglo[] ={7,56,1,9,10};
+        int miarreglo2[]={8,54,5,85,5};
         
         
-        arr2=Arrays.copyOf(arr1, 5);
-        //copy of range(arr1, 3, 1) desde el 3 al 1
         
-        
-        for(int x=0;x<arr2.length;x++){
-        
-        System.out.println(arr2[x]);
-        }
-        
-  
-
+       if(Arrays.equals(miarreglo,miarreglo2)){
+       
+       System.out.println("Son iguales");
+       }
+       else{
+       System.out.println("Son distintos");
+       }
         
         
        
