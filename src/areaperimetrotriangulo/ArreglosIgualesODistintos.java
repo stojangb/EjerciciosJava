@@ -7,10 +7,7 @@ package areaperimetrotriangulo;
 import java.util.Arrays;
 import java.util.Scanner;
 
-/**
- *
- * @author 19759309-1
- */
+
 public class ArreglosIgualesODistintos {
 
     /**
