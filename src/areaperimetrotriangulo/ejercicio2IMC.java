@@ -19,7 +19,6 @@ public class ejercicio2IMC {
         // TODO code application logic here
 
         double Peso = 0,Altura = 0,IMC = 0;
-        System.out.println("hola este programa ha");
         System.out.println("Este programa le calculara el IMC: Indice de masa corporal");
         
         System.out.println("Ingrese la altura en metros: ");
