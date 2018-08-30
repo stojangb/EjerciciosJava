@@ -28,6 +28,7 @@ public class Guia7Ej3 {
     
        int[] numeros = new int[d];
        int[] numeros2 = new int[d];
+       int[] numeros3 = new int[d];
         System.out.println("Arreglo 1: ");
         for(int x=0;x<numeros.length;x++){
             
@@ -56,7 +57,7 @@ public class Guia7Ej3 {
         //Arreglo en orden ascendente
       
         
-        //copiar Arreglo en otro arreglo y darlo vuelta..
+        //copiar Arreglo en otro arreglo y darlo vuelta..(Abajo)
         System.out.println("");
         System.out.println("Arreglo 2: ");
            numeros2=Arrays.copyOf(numeros, 15);
@@ -69,13 +70,41 @@ public class Guia7Ej3 {
         System.out.println("");//No poner nada AQUI, mejora la visualizacion
         System.out.println("El numero maximo es: "+maximo);
         System.out.println("El numero minimo es: "+minimo);
-        System.out.println("El arreglo en orden ascendente es: ");
-        System.out.println("El arreglo en orden descendente es: ");
+
         System.out.println("El arreglo 2 copiado en otro arreglo al revez es: ");
         
+        //Dando vuelta el arreglo:
+                int w=14;
+               for(int x=0;x<numeros2.length;x++){
+                  
+               numeros2[w] = numeros[x];
+               w--;
+                }
+                
+                for(int e=0;e<numeros2.length;e++){
+                    System.out.println("En la posición " +e+" se encuentra el valor: "+numeros2[e] );
+                }
+                //se ordenada el arreglo en forma ascendente y descendente
+        System.out.println("El arreglo 2 en orden ascendente es: ");
         
+        Arrays.sort(numeros2);
         
-
+        for(int e=0;e<numeros2.length;e++){
+            System.out.println("En la posición " +e+" se encuentra el valor: "+numeros2[e] );
+        }
+        
+        numeros3 = Arrays.copyOf(numeros2, 15);
+        System.out.println("El arreglo 2 en orden descendente es: ");
+        
+               int o=14;
+               for(int x=0;x<numeros2.length;x++){
+                  
+               numeros2[o] = numeros3[x];
+               o--;
+                }
+        for(int e=0;e<numeros2.length;e++){
+            System.out.println("En la posición " +e+" se encuentra el valor: "+numeros2[e] );
+        }
     }}
     
 
