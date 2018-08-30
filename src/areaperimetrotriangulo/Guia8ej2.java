@@ -24,16 +24,21 @@ public class Guia8ej2 {
         
     
        int[][] numeros = new int[d][d];
+       int[] arregloacomparar = new int[d];
        
               for(int a=0;a<2;a++){
-       for(int b=0;b<2;b++){
+       
  
-           System.out.println("Ingrese un/otro numero para el arreglo  en la posición: "+a+","+b);
+           System.out.println("Ingrese un/otro numero para el arreglo  en la posición: "+a+" A comparar... ");
            Scanner aas = new Scanner(System.in);
            
-           numeros[a][b]= aas.nextInt();
+           arregloacomparar[a]= aas.nextInt();
        }       
-       }
+                     for(int a=0;a<2;a++){
+       
+ 
+                         System.out.println("El numero del arreglo es: "+arregloacomparar[a]);
+       }       
               
 //                  “Construir un programa en PseInt que permita llenar una matriz de 5X5 y un arreglo
 //    unidimensional de capacidad 5, con números enteros leídos desde teclado, luego deberá imprimir en la
@@ -55,19 +60,18 @@ public class Guia8ej2 {
            numeros[a][b]= aas.nextInt();
        }       
        }
-       
+       int l=0;
        for(int a=0;a<2;a++){
-       
-       for(int b=0;b<2;b++){
- 
-           System.out.print(numeros[a][b]+"\t");
            
-           
+           if(arregloacomparar[a]==numeros[a][0]){
+               System.out.println("Numeros iguales detectados "+a+" en la posicion y 0");
+           }
+           if(arregloacomparar[a]==numeros[a][1]){
+               System.out.println("Numeros iguales detectados "+a+"en laposicion y 1");
+           }
+               
        
-       }       
-           System.out.println("");
-       }
-        System.out.println("El numero de 0 en el renglon 1 es: "+renglon1+" Y en el renglon 2 es: "+renglon2);
-    }}
+       
+    }}}
     
 
