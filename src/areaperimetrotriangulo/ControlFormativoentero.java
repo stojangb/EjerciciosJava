@@ -221,27 +221,28 @@ matrizrandom[a][b] = (int) (Math.random() * 80) + 1;
         System.out.println(sumadiagonalsecundariamatrizrandomica);
         
         // copio lo mismo, ahí que hacer lo mismo pero al revez
-          System.out.println("Suma diagonal principal matriz usuario");
+        //suma diagonal principal matriz randomica
+          System.out.println("Suma diagonal principal matriz randomica");
         
        a=0;
-       sumadiagonalprincipalmusuario=0;
+       int sumadiagonalprincipalmrandomica=0;
        for(int b=0;b<4;b++){
            
-          sumadiagonalprincipalmusuario = numeros[a][b] + sumadiagonalprincipalmusuario;
+          sumadiagonalprincipalmrandomica = numeros[a][b] + sumadiagonalprincipalmrandomica;
    
            a++;
        }
-        System.out.println(sumadiagonalprincipalmusuario);
+        System.out.println(sumadiagonalprincipalmrandomica);
        
-       //suma diagonal secundaria matriz randomica
-        sumadiagonalsecundariamatrizrandomica=0;
+       //suma diagonal secundaria matriz usuario
+       int sumadiagonalsecundariamatrizusuario=0;
         System.out.println("");
-               System.out.println("Mostrando suma diagonal secundaria matriz randomica");
+               System.out.println("Mostrando suma diagonal secundaria matriz usuario");
         System.out.println("");
        c=0;
        for(int b=3;b>-1;b--){
            
-           sumadiagonalsecundariamatrizrandomica = matrizrandom[b][c]+sumadiagonalsecundariamatrizrandomica;
+           sumadiagonalsecundariamatrizusuario = matrizrandom[b][c]+sumadiagonalsecundariamatrizusuario;
            System.out.println("");
            c++;
        }
