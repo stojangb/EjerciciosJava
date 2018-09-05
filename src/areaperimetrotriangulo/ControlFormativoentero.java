@@ -165,10 +165,88 @@ matrizrandom[a][b] = (int) (Math.random() * 80) + 1;
         }
         
         System.out.println("");
-         System.out.println("la suma total de la matriz randomica es: "+ sumatotalb +" y la suma total de la matriz usuario es "+sumatotala);
+        System.out.println("la suma total de la matriz randomica es: "+ sumatotalb +" y la suma total de la matriz usuario es "+sumatotala);
         System.out.println("");
         System.out.println("la media de la matriz randomica es: "+ sumatotalb/16 +" y la media de la matriz usuario es "+sumatotala/16);
        
+        
+        
+        // mostrar diagonal principal solo matriz usuario
+        System.out.println("Mostrando diagonal principal matriz usuario");
+        
+       int a=0;
+       for(int b=0;b<4;b++){
+           
+           System.out.print(numeros[a][b]+"\t");   
+           System.out.println("");
+           a++;
+       }
+       //mostrar diagonal secundaria matriz randomica
+        System.out.println("");
+               System.out.println("Mostrando diagonal secundaria matriz randomica");
+        System.out.println("");
+       int c=0;
+       for(int b=3;b>-1;b--){
+           
+           System.out.print(matrizrandom[b][c]+"\t");   
+           System.out.println("");
+           c++;
+       }
+       
+       //suma diagonal principal y secundaria ambas matrices
+               System.out.println("Suma diagonal principal matriz usuario");
+        
+       a=0;
+       int sumadiagonalprincipalmusuario=0;
+       for(int b=0;b<4;b++){
+           
+          sumadiagonalprincipalmusuario = numeros[a][b] + sumadiagonalprincipalmusuario;
+   
+           a++;
+       }
+        System.out.println(sumadiagonalprincipalmusuario);
+       
+       //suma diagonal secundaria matriz randomica
+       int sumadiagonalsecundariamatrizrandomica=0;
+        System.out.println("");
+               System.out.println("Mostrando suma diagonal secundaria matriz randomica");
+        System.out.println("");
+       c=0;
+       for(int b=3;b>-1;b--){
+           
+           sumadiagonalsecundariamatrizrandomica = matrizrandom[b][c]+sumadiagonalsecundariamatrizrandomica;
+           System.out.println("");
+           c++;
+       }
+        System.out.println(sumadiagonalsecundariamatrizrandomica);
+        
+        // copio lo mismo, ahí que hacer lo mismo pero al revez
+          System.out.println("Suma diagonal principal matriz usuario");
+        
+       a=0;
+       sumadiagonalprincipalmusuario=0;
+       for(int b=0;b<4;b++){
+           
+          sumadiagonalprincipalmusuario = numeros[a][b] + sumadiagonalprincipalmusuario;
+   
+           a++;
+       }
+        System.out.println(sumadiagonalprincipalmusuario);
+       
+       //suma diagonal secundaria matriz randomica
+        sumadiagonalsecundariamatrizrandomica=0;
+        System.out.println("");
+               System.out.println("Mostrando suma diagonal secundaria matriz randomica");
+        System.out.println("");
+       c=0;
+       for(int b=3;b>-1;b--){
+           
+           sumadiagonalsecundariamatrizrandomica = matrizrandom[b][c]+sumadiagonalsecundariamatrizrandomica;
+           System.out.println("");
+           c++;
+       }
+        System.out.println(sumadiagonalsecundariamatrizrandomica);
+        
     }}
     
 
