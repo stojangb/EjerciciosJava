@@ -26,6 +26,10 @@ public class ControlFormativoentero {
        int[][] numeros = new int[d][d];
        int[][] matrizrandom = new int[d][d];
        int[][] matrizresultado = new int[d][d];
+       int[] sumacolumnasmatrizusuario = new int[d];
+       int[] sumafilamatrizrandomica = new int[d];
+       int[] sumafilamatrizusuario = new int[d];
+       int[] sumacolumnamatrizrandomica = new int[d];
        
        for(int a=0;a<4;a++){
        for(int b=0;b<4;b++){
@@ -87,7 +91,7 @@ matrizrandom[a][b] = (int) (Math.random() * 80) + 1;
            break;
            }
            case 2:{
-           matrizresultado[a][b] = matrizrandom[a][b] - numeros[a][b];
+           matrizresultado[a][b] =numeros[a][b] - matrizrandom[a][b];
            break;
            }
            
@@ -97,16 +101,11 @@ matrizrandom[a][b] = (int) (Math.random() * 80) + 1;
            }
            
             case 4:{
-                matrizresultado[a][b] = matrizrandom[a][b] / numeros[a][b];
+                matrizresultado[a][b] = numeros[a][b] / matrizrandom[a][b];
            break;
            }
            
            }
-           
-
-           
-      
-
        }       
        }
         
@@ -117,6 +116,58 @@ matrizrandom[a][b] = (int) (Math.random() * 80) + 1;
        }       
            System.out.println("");
        }
+       
+       
+       
+             //Suma de columnas matriz usuario
+
+        for(int a=0;a<4;a++){
+        for(int b=0;b<4;b++){
+          
+           sumacolumnasmatrizusuario[a] = numeros[b][a] + sumacolumnasmatrizusuario[a];
+           sumafilamatrizrandomica[a] = matrizrandom[a][b] + sumafilamatrizrandomica[a];
+           sumafilamatrizusuario[a] = numeros[a][b] + sumafilamatrizusuario[a];
+           sumacolumnamatrizrandomica[a] = matrizrandom[b][a] + sumacolumnamatrizrandomica[a];
+           
+       }       
+       }
+        int sumatotala=0;
+        int sumatotalb=0;
+        
+       //inicio
+       
+        for(int a=0;a<4;a++){
+ 
+          
+           sumatotala = sumacolumnasmatrizusuario[a] +sumatotala;
+           sumatotalb = sumafilamatrizrandomica[a] +sumatotalb;
+
+           
+       }       
+        
+        
+       
+       
+       //fin
+        
+        
+        
+        System.out.println("Suma columnas matriz usuario");
+        for(int a=0;a<4;a++){
+        System.out.print(sumacolumnasmatrizusuario[a]+"\t");
+        }
+       //Suma de filas matriz randomica
+
+        System.out.println("");
+        System.out.println("Suma filas matriz Randomica");
+        for(int a=0;a<4;a++){
+        System.out.print(sumafilamatrizrandomica[a]+"\n");
+        }
+        
+        System.out.println("");
+         System.out.println("la suma total de la matriz randomica es: "+ sumatotalb +" y la suma total de la matriz usuario es "+sumatotala);
+        System.out.println("");
+        System.out.println("la media de la matriz randomica es: "+ sumatotalb/16 +" y la media de la matriz usuario es "+sumatotala/16);
        
     }}
     
