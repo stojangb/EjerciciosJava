@@ -30,6 +30,7 @@ public class ControlFormativoentero {
        int[] sumafilamatrizrandomica = new int[d];
        int[] sumafilamatrizusuario = new int[d];
        int[] sumacolumnamatrizrandomica = new int[d];
+       int[] repetidos = new int[16];
        
        for(int a=0;a<4;a++){
        for(int b=0;b<4;b++){
@@ -266,9 +267,35 @@ matrizrandom[a][b] = (int) (Math.random() * 80) + 1;
            System.out.println("");
        }
        
+       //Aquí empieza la acción-
+
+       int h = 0;
+ 
+       for(a=0;a<4;a++){
+       for(int b=0;b<4;b++){
+       repetidos[h] = numeros[a][b];
+       h++;
+       }}
+       Arrays.sort(repetidos);
+        System.out.println("Transformando arreglo bidimensional a unidimensional para facilitar conteo de repeticiones");
+        System.out.println("");
+       
+       for(int z=0;z<16;z++){
+           System.out.print(repetidos[z]+"\t"); 
+       }
+       
+       //ver numeros iguales arreglo unidimensional
+        System.out.println("");
+        System.out.println("Se comienza contando desde la posición cero");
+        System.out.println("");
+           for(int z=0;z<15;z++){
+           if(repetidos[z]==repetidos[z+1]){
+               System.out.println("El numero: "+repetidos[z]+" se repite en la posición: "+(z+1));
+           } 
+       }
        
        
-        
+       
     }}
     
 
